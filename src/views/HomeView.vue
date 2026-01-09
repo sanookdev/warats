@@ -1,21 +1,19 @@
 <template>
   <div class="home-page">
     <HeroSection 
-      name="Warat Supaporn"
-      subtitle="UI/UX Interaction Designer
-Based in Poland"
+      name="Mr. Warat Supaporn"
+      subtitle="I am ordinary developer"
       biography="Work for money and design for love!
-I'm Bruno, an UI/UX Interaction Designer based in Poland"
-      location="Warsaw, Poland"
-      email="hello@brunoerdison.com"
-      phone="+68 3568 89 86"
-      :services="['Website Design', 'Mobile Application Design', 'Animation']"
-      profileImage="/profile.jpg"
+I'm Warat Supaporn, an Software Developer"
+      location="Thailand"
+      email="nuk.warat@gmail.com"
+      phone="+66 652 352 3666"
+      :services="['Website Design', 'Web Application', 'Fix Bug']"
+      profileImage="/sanookdev.png"
       :stats="[
-        { label: 'YEARS OF\nEXPERIENCE', value: '8' },
-        { label: 'SATISFACTION\nCLIENTS', value: '100%' },
-        { label: 'CLIENTS ON\nWORLDWIDE', value: '+80' },
-        { label: 'PROJECTS DONE', value: '675' }
+        { label: 'YEARS OF\nEXPERIENCE', value: '6+' },
+        { label: 'FIXED BUG', value: '+30' },
+        { label: 'PROJECTS DONE', value: '+20' }
       ]"
       :clients="[
         { name: 'BLB' },
@@ -53,16 +51,13 @@ I'm Bruno, an UI/UX Interaction Designer based in Poland"
     />
 
     <AboutSection 
-      title="Crafting Digital Experiences That Inspire"
+      title="Know me more"
       :paragraphs="[
-        'I am a passionate designer and developer with a keen eye for creating beautiful, functional digital experiences.',
-        'My approach combines modern aesthetics with user-centered design principles.'
+        'I\'m a Software Developer at the Faculty of Medicine, Thammasat University (Educational Technology). My role involves collaborating with staff to turn their requirements into functional web applications, choosing the right tech stack for each system. When I\'m not coding',
+        'My favourite hobbies is Playing Basketball 🏀 and I have cats 🐈'
       ]"
       :skills="[
-        { name: 'UI/UX Design', level: 95 },
-        { name: 'Frontend Dev', level: 90 },
-        { name: 'Brand Identity', level: 85 },
-        { name: 'Motion Design', level: 80 }
+        { name: 'Fullstack Developer', level: 100 }
       ]"
       image="/about.jpg"
       :yearsExperience="8"
@@ -73,10 +68,8 @@ I'm Bruno, an UI/UX Interaction Designer based in Poland"
       phone="+68 3568 89 86"
       location="Warsaw, Poland"
       :socials="[
-        { name: 'Twitter', url: 'https://twitter.com' },
         { name: 'LinkedIn', url: 'https://linkedin.com' },
-        { name: 'GitHub', url: 'https://github.com' },
-        { name: 'Dribbble', url: 'https://dribbble.com' }
+        { name: 'GitHub', url: 'https://github.com' }
       ]"
     />
   </div>

@@ -11,12 +11,12 @@
       <div class="hero__content">
         <!-- Left Side - Biography & Info -->
         <div class="hero__left">
-          <div class="hero__section animate-fadeInLeft delay-100">
+          <div class="hero__section animate-fadeInLeft ">
             <span class="hero__label">BIOGRAPHY</span>
             <p class="hero__bio">{{ biography }}</p>
           </div>
 
-          <div class="hero__section animate-fadeInLeft delay-200">
+          <div class="hero__section animate-fadeInLeft">
             <span class="hero__label">CONTACT</span>
             <div class="hero__contact">
               <p>{{ location }}</p>
@@ -25,7 +25,7 @@
             </div>
           </div>
 
-          <div class="hero__section animate-fadeInLeft delay-300">
+          <div class="hero__section animate-fadeInLeft ">
             <span class="hero__label">SERVICES</span>
             <ul class="hero__services">
               <li v-for="service in services" :key="service">{{ service }}</li>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Center - Profile Image -->
-        <div class="hero__center animate-scaleIn delay-200">
+        <div class="hero__center animate-scaleIn ">
           <div class="hero__image-wrapper">
             <img :src="profileImage" :alt="name" class="hero__image" />
           </div>
@@ -46,7 +46,6 @@
             class="hero__stat animate-fadeInRight" 
             v-for="(stat, index) in stats" 
             :key="stat.label"
-            :class="'delay-' + ((index + 1) * 100)"
           >
             <span class="hero__stat-label">{{ stat.label }}</span>
             <span class="hero__stat-value">{{ stat.value }}</span>
@@ -102,7 +101,7 @@ export default {
     },
     profileImage: {
       type: String,
-      default: '/profile.jpg'
+      default: '/sanookdev.png'
     },
     stats: {
       type: Array,
