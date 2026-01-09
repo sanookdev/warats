@@ -9,7 +9,7 @@ I'm Warat Supaporn, an Software Developer"
       email="nuk.warat@gmail.com"
       phone="+66 652 352 3666"
       :services="['Website Design', 'Web Application', 'Fix Bug']"
-      profileImage="/sanookdev.png"
+      profileImage="/profile-1-Photoroom.png"
       :stats="[
         { label: 'YEARS OF\nEXPERIENCE', value: '6+' },
         { label: 'FIXED BUG', value: '+30' },

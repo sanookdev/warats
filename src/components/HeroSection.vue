@@ -232,7 +232,7 @@ export default {
 .hero__image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 350px;
+  max-width: 420px;
   aspect-ratio: 3/4;
   border-radius: 200px 200px 200px 200px;
   overflow: hidden;
