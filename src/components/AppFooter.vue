@@ -6,31 +6,6 @@
         <p class="footer__copyright">
           © {{ currentYear }} {{ name }}. All rights reserved.
         </p>
-
-        <!-- Links -->
-        <nav class="footer__nav">
-          <router-link 
-            v-for="link in navLinks" 
-            :key="link.path"
-            :to="link.path"
-            class="footer__link"
-          >
-            {{ link.name }}
-          </router-link>
-        </nav>
-
-        <!-- Social Links -->
-        <div class="footer__socials">
-          <a 
-            v-for="social in socials" 
-            :key="social.name"
-            :href="social.url" 
-            target="_blank"
-            class="footer__social"
-          >
-            {{ social.name }}
-          </a>
-        </div>
       </div>
 
       <!-- Back to Top -->
@@ -68,10 +43,10 @@ export default {
     socials: {
       type: Array,
       default: () => [
-        { name: 'Twitter', url: 'https://twitter.com' },
-        { name: 'LinkedIn', url: 'https://linkedin.com' },
-        { name: 'GitHub', url: 'https://github.com' },
-        { name: 'Dribbble', url: 'https://dribbble.com' }
+        // { name: 'Twitter', url: 'https://twitter.com' },
+        { name: 'Github', url: 'https://sanookdev.github.com' },
+      { name: 'Email', url: 'mailto:nuk.warat@gmail.com' }
+        // { name: 'Dribbble', url: 'https://dribbble.com' }
       ]
     }
   },
@@ -79,9 +54,9 @@ export default {
     const currentYear = computed(() => new Date().getFullYear())
     
     const navLinks = [
-      { name: 'Home', path: '/' },
-      { name: 'Works', path: '/works' },
-      { name: 'Contact', path: '/contact' }
+      // { name: 'Home', path: '/' },
+      // { name: 'Works', path: '/works' },
+      // { name: 'Contact', path: '/contact' }
     ]
 
     const scrollToTop = () => {
@@ -108,7 +83,7 @@ export default {
 
 .footer__content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;

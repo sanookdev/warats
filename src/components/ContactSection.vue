@@ -2,25 +2,28 @@
   <section id="contact" class="contact">
     <div class="contact__container container">
       <div class="contact__header reveal">
-        <span class="contact__label">Get In Touch</span>
-        <h2 class="contact__title">Let's Work Together</h2>
-        <p class="contact__subtitle">
-          Have a project in mind? Let's discuss how we can bring your ideas to life.
-        </p>
+        <h2 class="contact__title">Contact</h2>
       </div>
 
       <div class="contact__content">
         <!-- Contact Info -->
         <div class="contact__info reveal-left">
           <div class="contact__info-item">
+
+            <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+         
             <span class="contact__info-label">Email</span>
             <a :href="'mailto:' + email" class="contact__info-value">
-              {{ email }}
+               <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
             </a>
           </div>
 
           <div class="contact__info-item">
-            <span class="contact__info-label">Phone</span>
+            <span class="contact__info-label">Mobile</span>
             <a :href="'tel:' + phone" class="contact__info-value">
               {{ phone }}
             </a>
@@ -30,73 +33,7 @@
             <span class="contact__info-label">Location</span>
             <span class="contact__info-value">{{ location }}</span>
           </div>
-
-          <div class="contact__socials">
-            <a 
-              v-for="social in socials" 
-              :key="social.name"
-              :href="social.url" 
-              target="_blank"
-              class="contact__social"
-            >
-              {{ social.name }}
-            </a>
-          </div>
         </div>
-
-        <!-- Contact Form -->
-        <form class="contact__form reveal-right" @submit.prevent="handleSubmit">
-          <div class="contact__form-row">
-            <div class="contact__form-group">
-              <label for="name">Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                v-model="form.name" 
-                required 
-                placeholder="Your name"
-              />
-            </div>
-            <div class="contact__form-group">
-              <label for="email">Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                v-model="form.email" 
-                required 
-                placeholder="your@email.com"
-              />
-            </div>
-          </div>
-
-          <div class="contact__form-group">
-            <label for="subject">Subject</label>
-            <input 
-              type="text" 
-              id="subject" 
-              v-model="form.subject" 
-              placeholder="Project inquiry"
-            />
-          </div>
-
-          <div class="contact__form-group">
-            <label for="message">Message</label>
-            <textarea 
-              id="message" 
-              v-model="form.message" 
-              rows="5" 
-              required
-              placeholder="Tell me about your project..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="contact__submit">
-            Send Message
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-            </svg>
-          </button>
-        </form>
       </div>
     </div>
   </section>
@@ -123,10 +60,8 @@ export default {
     socials: {
       type: Array,
       default: () => [
-        { name: 'Twitter', url: 'https://twitter.com' },
-        { name: 'LinkedIn', url: 'https://linkedin.com' },
-        { name: 'GitHub', url: 'https://github.com' },
-        { name: 'Dribbble', url: 'https://dribbble.com' }
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/warat-supaporn-393693209' },
+        { name: 'GitHub', url: 'https://github.com/sanookdev' },
       ]
     }
   },

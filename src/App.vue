@@ -8,15 +8,8 @@
     
     <AppFooter 
       name="Warat Supaporn"
-      email="hello@brunoerdison.com"
-      phone="+68 3568 89 86"
-      location="Warsaw, Poland"
-      :socials="[
-        { name: 'Twitter', url: 'https://twitter.com' },
-        { name: 'LinkedIn', url: 'https://linkedin.com' },
-        { name: 'GitHub', url: 'https://github.com' },
-        { name: 'Dribbble', url: 'https://dribbble.com' }
-      ]"
+      email="nuk.warat@gmail.com"
+      phone="0653523666"
     />
 
     <ThemeToggle />

@@ -16,13 +16,7 @@
 
       <!-- Logo -->
       <router-link to="/" class="header__logo">
-        <svg class="header__logo-icon" viewBox="0 0 40 40" fill="none">
-          <path d="M20 5L8 12v16l12 7 12-7V12L20 5z" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M20 10l-8 4.5v9l8 4.5 8-4.5v-9L20 10z" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-        <div class="header__logo-text">
-          <span>WARAT SUPAPORN</span>
-        </div>
+        <img src="/profile-1-Photoroom.png" alt="Warat Supaporn" class="header__logo-img" />
       </router-link>
 
       <!-- Right Navigation -->
@@ -88,9 +82,9 @@ export default {
     const isScrolled = ref(false)
 
     const leftLinks = [
-      { name: 'WORKS', path: '/works' },
-      { name : "BLOGS" , path:'/'},
-      { name: 'CONTACT', path: '/contact' }
+      // { name: 'WORKS', path: '/works' },
+      // { name : "HOME" , path:'/'},
+      // { name: 'CONTACT', path: '/contact' }
     ]
 
     const navLinks = [
@@ -101,8 +95,6 @@ export default {
     ]
 
     const socialLinks = [
-      { name: 'Facebook', url: 'https://facebook.com' },
-      { name: 'Instagram', url: 'https://instagram.com' },
       { name: 'Github', url: 'https://sanookdev.github.com' },
       { name: 'Email', url: 'mailto:nuk.warat@gmail.com' }
     ]
@@ -206,15 +198,18 @@ export default {
   transform: scale(1.05);
 }
 
-.header__logo-icon {
-  width: 32px;
-  height: 32px;
-  color: var(--color-text);
-  transition: transform var(--transition);
+.header__logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+  transition: all var(--transition);
 }
 
-.header__logo:hover .header__logo-icon {
-  transform: rotate(15deg);
+.header__logo:hover .header__logo-img {
+  border-color: var(--color-text);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .header__logo-text {

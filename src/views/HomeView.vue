@@ -16,15 +16,12 @@ I'm Warat Supaporn, an Software Developer"
         { label: 'PROJECTS DONE', value: '+20' }
       ]"
       :clients="[
-        { name: 'BLB' },
-        { name: 'christopher willis' },
-        { name: 'SERENITY' },
-        { name: 'ARTCHIVE' },
-        { name: 'CREATIVE' }
+        { name: 'email' },
+        { name: 'github' }
       ]"
     />
 
-    <WorksSection 
+    <!-- <WorksSection 
       :works="[
         {
           id: 1,
@@ -48,9 +45,9 @@ I'm Warat Supaporn, an Software Developer"
           image: '/work-3.jpg'
         }
       ]"
-    />
+    /> -->
 
-    <AboutSection 
+    <!-- <AboutSection 
       title="Know me more"
       :paragraphs="[
         'I\'m a Software Developer at the Faculty of Medicine, Thammasat University (Educational Technology). My role involves collaborating with staff to turn their requirements into functional web applications, choosing the right tech stack for each system. When I\'m not coding',
@@ -61,17 +58,17 @@ I'm Warat Supaporn, an Software Developer"
       ]"
       image="/about.jpg"
       :yearsExperience="8"
-    />
+    /> -->
 
-    <ContactSection 
-      email="hello@brunoerdison.com"
-      phone="+68 3568 89 86"
-      location="Warsaw, Poland"
+    <!-- <ContactSection 
+      email="nuk.warat@gmail.com"
+      phone="0653523666"
+      location="Pathum Thani, Thailand"
       :socials="[
-        { name: 'LinkedIn', url: 'https://linkedin.com' },
-        { name: 'GitHub', url: 'https://github.com' }
+         { name: 'Github', url: 'https://sanookdev.github.com' },
+         { name: 'Email', url: 'mailto:nuk.warat@gmail.com' }
       ]"
-    />
+    /> -->
   </div>
 </template>
 
