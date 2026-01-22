@@ -89,9 +89,9 @@ export default {
 
     const navLinks = [
       { name: 'Home', path: '/' },
-      { name: 'Works', path: '/works' },
-      { name: 'About', path: '/#about' },
-      { name: 'Contact', path: '/contact' }
+      // { name: 'Works', path: '/works' },
+      // { name: 'About', path: '/#about' },
+      // { name: 'Contact', path: '/contact' }//
     ]
 
     const socialLinks = [
