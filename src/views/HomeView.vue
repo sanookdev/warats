@@ -3,8 +3,7 @@
     <HeroSection 
       name="Mr. Warat Supaporn"
       subtitle="I am ordinary developer"
-      biography="Work for money and design for love!
-I'm Warat Supaporn, an Software Developer"
+      biography="โปรแกรมเมอร์ร้อนเงิน หาเงินเลี้ยงแมว !!!"
       location="Thailand"
       email="nuk.warat@gmail.com"
       phone="+66 652 352 3666"

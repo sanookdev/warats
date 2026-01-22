@@ -12,7 +12,7 @@
         <!-- Left Side - Biography & Info -->
         <div class="hero__left">
           <div class="hero__section animate-fadeInLeft ">
-            <span class="hero__label">BIOGRAPHY</span>
+            <span class="hero__label">About</span>
             <p class="hero__bio">{{ biography }}</p>
           </div>
 
@@ -70,7 +70,7 @@ export default {
     },
     biography: {
       type: String,
-      default: "Work for money and design for love!\nI'm Bruno, an UI/UX Interaction Designer based in Poland"
+      default: "หาเงินเลี้ยงแมวครับ"
     },
     location: {
       type: String,
