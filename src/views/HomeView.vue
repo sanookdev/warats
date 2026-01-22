@@ -2,17 +2,17 @@
   <div class="home-page">
     <HeroSection 
       name="Mr. Warat Supaporn"
-      subtitle="I am ordinary developer"
+      subtitle="I am Fullstack Developer"
       biography="โปรแกรมเมอร์ร้อนเงิน หาเงินเลี้ยงแมว !!!"
-      location="Thailand"
+      location="Pathum Thani, Thailand"
       email="nuk.warat@gmail.com"
       phone="+66 652 352 3666"
       :services="['Website Design', 'Web Application', 'Fix Bug']"
       profileImage="/profile-1-Photoroom.png"
       :stats="[
-        { label: 'YEARS OF\nEXPERIENCE', value: '6+' },
-        { label: 'FIXED BUG', value: '+30' },
-        { label: 'PROJECTS DONE', value: '+20' }
+        { label: 'BASKETBALL', value: '' },
+        { label: 'PLAY WITH CATS', value: '' },
+        { label: 'TRAVEL', value: '' }
       ]"
       :clients="[
         { name: 'email' },
