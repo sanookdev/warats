@@ -63,7 +63,7 @@
       phone="0653523666"
       location="Pathum Thani, Thailand"
       :socials="[
-         { name: 'Github', url: 'https://sanookdev.github.com' },
+         { name: 'Github', url: 'https://github.com/sanookdev' },
          { name: 'Email', url: 'mailto:nuk.warat@gmail.com' }
       ]"
     /> -->

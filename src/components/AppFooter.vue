@@ -40,7 +40,7 @@ export default {
       type: Array,
       default: () => [
         // { name: 'Twitter', url: 'https://twitter.com' },
-        { name: 'Github', url: 'https://sanookdev.github.com' },
+        { name: 'Github', url: 'https://github.com/sanookdev' },
       { name: 'Email', url: 'mailto:nuk.warat@gmail.com' }
         // { name: 'Dribbble', url: 'https://dribbble.com' }
       ]

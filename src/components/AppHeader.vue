@@ -88,7 +88,7 @@ export default {
 
     const socialLinks = [
       { name: 'Email', url: 'mailto:nuk.warat@gmail.com' },
-      { name: 'Github', url: 'https://sanookdev.github.com' }
+      { name: 'Github', url: 'https://github.com/sanookdev' }
     ]
 
     const handleScroll = () => {
