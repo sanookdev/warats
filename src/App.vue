@@ -9,7 +9,6 @@
     <AppFooter 
       name="Warat Supaporn"
       email="nuk.warat@gmail.com"
-      phone="0653523666"
     />
 
     <ThemeToggle />

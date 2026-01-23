@@ -32,10 +32,6 @@ export default {
       type: String,
       default: 'hello@brunoerdison.com'
     },
-    phone: {
-      type: String,
-      default: '+68 3568 89 86'
-    },
     location: {
       type: String,
       default: 'Warsaw, Poland'

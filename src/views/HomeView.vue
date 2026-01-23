@@ -6,7 +6,6 @@
       biography="โปรแกรมเมอร์ร้อนเงิน หาเงินเลี้ยงแมว !!!"
       location="Pathum Thani, Thailand"
       email="nuk.warat@gmail.com"
-      phone="+66 652 352 3666"
       :services="['Website Design', 'Web Application', 'Fix Bug']"
       profileImage="/profile-1-Photoroom.png"
       :stats="[

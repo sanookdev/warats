@@ -13,7 +13,6 @@
 
     <ContactSection 
       email="hello@brunoerdison.com"
-      phone="+68 3568 89 86"
       location="Warsaw, Poland"
       :socials="[
         { name: 'Twitter', url: 'https://twitter.com' },
