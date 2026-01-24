@@ -1,8 +1,8 @@
 <template>
   <div class="home-page">
-    <HeroSection 
+    <HeroSection
       name="Mr. Warat Supaporn"
-      subtitle="I am Fullstack Developer"
+      subtitle="Fullstack Developer"
       biography="โปรแกรมเมอร์ร้อนเงิน หาเงินเลี้ยงแมว !!!"
       location="Pathum Thani, Thailand"
       email="nuk.warat@gmail.com"
@@ -11,12 +11,9 @@
       :stats="[
         { label: 'BASKETBALL', value: '' },
         { label: 'PLAY WITH CATS', value: '' },
-        { label: 'TRAVEL', value: '' }
+        { label: 'TRAVEL', value: '' },
       ]"
-      :clients="[
-        { name: 'email' },
-        { name: 'github' }
-      ]"
+      :clients="[{ name: 'email' }, { name: 'github' }]"
     />
 
     <!-- <WorksSection 
@@ -71,20 +68,20 @@
 </template>
 
 <script>
-import HeroSection from '@/components/HeroSection.vue'
-import WorksSection from '@/components/WorksSection.vue'
-import AboutSection from '@/components/AboutSection.vue'
-import ContactSection from '@/components/ContactSection.vue'
+import HeroSection from "@/components/HeroSection.vue";
+import WorksSection from "@/components/WorksSection.vue";
+import AboutSection from "@/components/AboutSection.vue";
+import ContactSection from "@/components/ContactSection.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     HeroSection,
     WorksSection,
     AboutSection,
-    ContactSection
-  }
-}
+    ContactSection,
+  },
+};
 </script>
 
 <style scoped>
