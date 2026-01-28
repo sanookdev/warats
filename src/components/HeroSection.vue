@@ -396,6 +396,7 @@ export default {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: default;
   min-width: 40px;
+  perspective: 1000px;
 }
 
 .hero__tech-item:hover {
@@ -406,11 +407,40 @@ export default {
 
 .hero__tech-item i {
   font-size: 1rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  animation: float3d 3s ease-in-out infinite;
 }
 
 .hero__tech-item:hover i {
-  transform: scale(1.2);
+  animation: spin3d 1s ease-in-out;
+}
+
+@keyframes float3d {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-3px) rotateX(5deg) rotateY(5deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(0deg) rotateY(10deg);
+  }
+  75% {
+    transform: translateY(-3px) rotateX(-5deg) rotateY(5deg);
+  }
+}
+
+@keyframes spin3d {
+  0% {
+    transform: rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+  }
 }
 
 .hero__tech-name {
