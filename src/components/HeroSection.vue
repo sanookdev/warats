@@ -120,7 +120,6 @@ export default {
           name: "Frameworks",
           items: [
             { name: "Vue.js", icon: "devicon-vuejs-plain colored" },
-            { name: "Laravel", icon: "devicon-laravel-original colored" },
             { name: "Node.js", icon: "devicon-nodejs-plain colored" },
             { name: "Tailwind", icon: "devicon-tailwindcss-original colored" },
             { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
@@ -145,6 +144,7 @@ export default {
             { name: "Apache", icon: "devicon-apache-plain colored" },
             { name: "Git", icon: "devicon-git-plain colored" },
             { name: "Vercel", icon: "devicon-vercel-original" },
+            { name: "PM2", icon: "devicon-pm2-plain colored" },
           ],
         },
       ],
