@@ -7,65 +7,84 @@
       </div>
 
       <div class="hero__content">
+        <!-- Left Side: About + Contact -->
         <div class="hero__left">
-          <div class="hero__section animate-fadeInLeft">
-            <span class="hero__label">About</span>
-            <p class="hero__bio">{{ biography }}</p>
+          <div class="hero__about">
+            <div class="hero__section animate-fadeInLeft">
+              <span class="hero__label">About</span>
+              <p class="hero__bio">{{ biography }}</p>
+            </div>
           </div>
 
-          <div class="hero__section animate-fadeInLeft">
-            <span class="hero__label">CONTACT</span>
-            <div class="hero__contact">
-              <div class="hero__social-secondary">
-                <a href="mailto:nuk.warat@gmail.com" class="hero__link-item">
-                  nuk.warat@gmail.com
-                </a>
-                <a
-                  href="https://github.com/sanookdev"
-                  target="_blank"
-                  class="hero__link-item"
-                >
-                  github.com/sanookdev
-                </a>
-              </div>
+          <div class="hero__contact-section">
+            <div class="hero__section animate-fadeInLeft">
+              <span class="hero__label">CONTACT</span>
+              <div class="hero__contact">
+                <div class="hero__social-secondary">
+                  <a href="mailto:nuk.warat@gmail.com" class="hero__link-item">
+                    nuk.warat@gmail.com
+                  </a>
+                  <a
+                    href="https://github.com/sanookdev"
+                    target="_blank"
+                    class="hero__link-item"
+                  >
+                    github.com/sanookdev
+                  </a>
+                </div>
 
-              <div class="hero__actions">
-                <a
-                  href="https://warat-supaporn.vercel.app"
-                  target="_blank"
-                  class="hero__cta"
-                >
-                  <span class="hero__cta-text">Know me more</span>
-                  <div class="hero__cta-icon">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                    >
-                      <path d="M5 12h14m-7-7l7 7-7 7" />
-                    </svg>
-                  </div>
-                </a>
+                <div class="hero__actions">
+                  <a
+                    href="https://warat-supaporn.vercel.app"
+                    target="_blank"
+                    class="hero__cta"
+                  >
+                    <span class="hero__cta-text">Know me more</span>
+                    <div class="hero__cta-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14m-7-7l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Profile Image -->
         <div class="hero__center animate-scaleIn">
           <div class="hero__image-wrapper">
             <img :src="profileImage" :alt="name" class="hero__image" />
           </div>
         </div>
 
-        <div class="hero__right">
-          <div
-            class="hero__stat animate-fadeInRight"
-            v-for="(stat, index) in stats"
-            :key="stat.label"
-          >
-            <span class="hero__stat-label">{{ stat.label }}</span>
-            <span class="hero__stat-value">{{ stat.value }}</span>
+        <!-- Tech Stack -->
+        <div class="hero__tech">
+          <div class="hero__tech-categories animate-fadeInRight">
+            <div 
+              class="hero__tech-category" 
+              v-for="category in techCategories" 
+              :key="category.name"
+            >
+              <span class="hero__tech-category-label">{{ category.name }}</span>
+              <div class="hero__tech-stack">
+                <div 
+                  class="hero__tech-item" 
+                  v-for="tech in category.items" 
+                  :key="tech.name"
+                  :title="tech.name"
+                >
+                  <i :class="tech.icon"></i>
+                  <span class="hero__tech-name">{{ tech.name }}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,13 +103,50 @@ export default {
     },
     biography: { type: String, default: "หาเงินเลี้ยงแมวครับ" },
     profileImage: { type: String, default: "/sanookdev.png" },
-    stats: {
+    techCategories: {
       type: Array,
       default: () => [
-        { label: "YEARS OF\nEXPERIENCE", value: "8" },
-        { label: "SATISFACTION\nCLIENTS", value: "100%" },
-        { label: "CLIENTS ON\nWORLDWIDE", value: "+80" },
-        { label: "PROJECTS DONE", value: "675" },
+        {
+          name: "Languages",
+          items: [
+            { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+            { name: "PHP", icon: "devicon-php-plain colored" },
+            { name: "C++", icon: "devicon-cplusplus-plain colored" },
+            { name: "HTML", icon: "devicon-html5-plain colored" },
+            { name: "CSS", icon: "devicon-css3-plain colored" },
+          ],
+        },
+        {
+          name: "Frameworks",
+          items: [
+            { name: "Vue.js", icon: "devicon-vuejs-plain colored" },
+            { name: "Laravel", icon: "devicon-laravel-original colored" },
+            { name: "Node.js", icon: "devicon-nodejs-plain colored" },
+            { name: "Tailwind", icon: "devicon-tailwindcss-original colored" },
+            { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
+            { name: "Vuetify", icon: "devicon-vuetify-plain colored" },
+          ],
+        },
+        {
+          name: "Database",
+          items: [
+            { name: "MySQL", icon: "devicon-mysql-plain colored" },
+            { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+            { name: "Firebase", icon: "devicon-firebase-plain colored" },
+            { name: "Supabase", icon: "devicon-supabase-plain colored" },
+          ],
+        },
+        {
+          name: "DevOps & Tools",
+          items: [
+            { name: "Docker", icon: "devicon-docker-plain colored" },
+            { name: "Jenkins", icon: "devicon-jenkins-plain colored" },
+            { name: "Nginx", icon: "devicon-nginx-original colored" },
+            { name: "Apache", icon: "devicon-apache-plain colored" },
+            { name: "Git", icon: "devicon-git-plain colored" },
+            { name: "Vercel", icon: "devicon-vercel-original" },
+          ],
+        },
       ],
     },
   },
@@ -136,7 +192,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 40px;
-  align-items: center;
+  align-items: start;
   margin-bottom: 80px;
 }
 
@@ -144,6 +200,26 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.hero__about {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero__tech {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.hero__contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .hero__section {
   display: flex;
@@ -255,12 +331,10 @@ export default {
   aspect-ratio: 3/4;
   border-radius: 200px;
   overflow: hidden;
-  background: var(--color-gray-200);
   transition: all var(--transition-slow);
 }
 .hero__image-wrapper:hover {
   transform: scale(1.02) translateY(-8px);
-  box-shadow: var(--shadow-xl);
 }
 .hero__image {
   width: 100%;
@@ -271,42 +345,130 @@ export default {
 .hero__right {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   align-items: flex-end;
   text-align: right;
 }
-.hero__stat-label {
+
+/* Tech Stack Categories */
+.hero__tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero__tech-category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.hero__tech-category-label {
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.15em;
   color: var(--color-text-muted);
   text-transform: uppercase;
-  white-space: pre-line;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-gray-200);
+  width: 100%;
+  text-align: right;
 }
-.hero__stat-value {
-  font-family: var(--font-serif);
-  font-size: 32px;
-  color: var(--color-text);
+
+/* Tech Stack Styles */
+.hero__tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.hero__tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: var(--color-gray-100);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  min-width: 40px;
+}
+
+.hero__tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: var(--color-bg);
+}
+
+.hero__tech-item i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.hero__tech-item:hover i {
+  transform: scale(1.2);
+}
+
+.hero__tech-name {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
   .hero__content {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
   .hero__left {
-    order: 2;
+    display: contents;
+  }
+  .hero__about {
+    order: 1;
     align-items: center;
   }
   .hero__center {
-    order: 1;
+    order: 0;
   }
-  .hero__right {
+  .hero__tech {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__contact-section {
     order: 3;
     align-items: center;
-    flex-direction: row;
+  }
+  .hero__tech-categories {
+    align-items: center;
+  }
+  .hero__tech-category {
+    align-items: center;
+  }
+  .hero__tech-category-label {
+    text-align: center;
+  }
+  .hero__tech-stack {
     justify-content: center;
+    gap: 8px;
+  }
+  .hero__tech-item {
+    padding: 10px 12px;
+    min-width: 60px;
+  }
+  .hero__tech-item i {
+    font-size: 22px;
+  }
+  .hero__tech-name {
+    font-size: 8px;
   }
   .hero__social-secondary {
     align-items: center;
