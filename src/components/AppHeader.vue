@@ -22,7 +22,7 @@
       <!-- Logo -->
       <router-link to="/" class="header__logo">
         <img
-          src="/sanookdev.png"
+          src="/profile-1-Photoroom.png"
           alt="Warat Supaporn"
           class="header__logo-img"
         />

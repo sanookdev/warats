@@ -39,7 +39,7 @@
                     target="_blank"
                     class="hero__cta"
                   >
-                    <span class="hero__cta-text">Know me more</span>
+                    <span class="hero__cta-text">Play a game to know me better</span>
                     <div class="hero__cta-icon">
                       <svg
                         viewBox="0 0 24 24"
@@ -102,7 +102,7 @@ export default {
       default: "UI/UX Interaction Designer\nBased in Poland",
     },
     biography: { type: String, default: "หาเงินเลี้ยงแมวครับ" },
-    profileImage: { type: String, default: "/sanookdev.png" },
+    profileImage: { type: String, default: "/profile-1.png" },
     techCategories: {
       type: Array,
       default: () => [
@@ -264,38 +264,102 @@ export default {
   transform: translateX(4px);
 }
 
-/* The Highlighted Button */
+/* The Highlighted Button - Glassmorphism Style */
 .hero__cta {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  padding: 14px 28px;
-  background-color: var(--color-text); /* ใช้ตัวแปรสีตาม Theme */
-  color: var(--color-bg); /* ใช้ตัวแปรสีตาม Theme */
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-text);
   border-radius: 100px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Animated gradient border */
+.hero__cta::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 100px;
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #f5576c,
+    #4facfe,
+    #00f2fe,
+    #667eea
+  );
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: gradient-rotate 4s ease infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero__cta:hover::after {
+  opacity: 1;
+}
+
+.hero__cta-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__cta-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  transition: all 0.4s ease;
 }
 
 .hero__cta-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
+  color: white;
   transition: transform 0.4s ease;
 }
 
 .hero__cta:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  /* ลบ background-color: #000; ออกแล้ว เพื่อให้ใช้สีจาก var(--color-text) เหมือนเดิม */
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(102, 126, 234, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
 }
 
 .hero__cta:hover .hero__cta-icon {
-  transform: translateX(5px);
+  transform: translateX(4px) rotate(45deg);
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.hero__cta:hover .hero__cta-icon svg {
+  transform: rotate(-45deg);
 }
 
 /* Shine Animation */
@@ -309,14 +373,25 @@ export default {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
-    /* สีขาวจางๆ สำหรับ Shine */ transparent
+    rgba(255, 255, 255, 0.4),
+    transparent
   );
   transition: all 0.6s;
+  z-index: 1;
 }
 
 .hero__cta:hover::before {
   left: 100%;
+}
+
+/* Floating animation */
+.hero__actions .hero__cta {
+  animation: float-button 3s ease-in-out infinite;
+}
+
+@keyframes float-button {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* --- Stats & Image --- */
@@ -337,8 +412,10 @@ export default {
   transform: scale(1.02) translateY(-8px);
 }
 .hero__image {
+  display: block;
   width: 100%;
   height: 100%;
+  min-height: 200px;
   object-fit: cover;
 }
 
@@ -463,10 +540,22 @@ export default {
   }
   .hero__about {
     order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
   .hero__center {
     order: 0;
+    width: 100%;
+  }
+  .hero__image-wrapper {
+    margin: 0 auto;
+  }
+  .hero__section {
+    text-align: center;
+    align-items: center;
+    width: 100%;
   }
   .hero__tech {
     order: 2;
@@ -475,7 +564,14 @@ export default {
   }
   .hero__contact-section {
     order: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+  .hero__contact {
+    align-items: center;
+    width: 100%;
   }
   .hero__tech-categories {
     align-items: center;
@@ -502,6 +598,11 @@ export default {
   }
   .hero__social-secondary {
     align-items: center;
+  }
+  .hero__actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .hero__link-item:hover {
     transform: translateY(-2px);

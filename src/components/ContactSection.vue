@@ -317,6 +317,15 @@ a.contact__info-value:hover {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+
+  .contact__info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact__info-item {
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {

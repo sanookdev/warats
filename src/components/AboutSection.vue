@@ -325,6 +325,15 @@ export default {
     max-width: 400px;
     margin: 0 auto;
   }
+
+  .about__text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .about__cta {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
