@@ -402,11 +402,12 @@ export default {
 .hero__image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 250px;
   aspect-ratio: 3/4;
   border-radius: 200px;
   overflow: hidden;
   transition: all var(--transition-slow);
+  background: transparent;
 }
 .hero__image-wrapper:hover {
   transform: scale(1.02) translateY(-8px);
