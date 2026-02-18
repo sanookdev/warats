@@ -12,7 +12,7 @@
           {{ link.name }}
         </router-link>
         <a
-          href="https://warat-supaporn.vercel.app"
+          href="https://profile.warats.com"
           target="_blank"
           class="header__link"
           >GAME PROFILE</a
@@ -22,7 +22,7 @@
       <!-- Logo -->
       <router-link to="/" class="header__logo">
         <img
-          src="/profile-1-Photoroom.png"
+          src="/sanookdev.png"
           alt="Warat Supaporn"
           class="header__logo-img"
         />

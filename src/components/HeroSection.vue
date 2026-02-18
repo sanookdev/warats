@@ -35,11 +35,13 @@
 
                 <div class="hero__actions">
                   <a
-                    href="https://warat-supaporn.vercel.app"
+                    href="https://profile.warats.com"
                     target="_blank"
                     class="hero__cta"
                   >
-                    <span class="hero__cta-text">Play a game to know me better</span>
+                    <span class="hero__cta-text"
+                      >Play a game to know me better</span
+                    >
                     <div class="hero__cta-icon">
                       <svg
                         viewBox="0 0 24 24"
@@ -67,16 +69,16 @@
         <!-- Tech Stack -->
         <div class="hero__tech">
           <div class="hero__tech-categories animate-fadeInRight">
-            <div 
-              class="hero__tech-category" 
-              v-for="category in techCategories" 
+            <div
+              class="hero__tech-category"
+              v-for="category in techCategories"
               :key="category.name"
             >
               <span class="hero__tech-category-label">{{ category.name }}</span>
               <div class="hero__tech-stack">
-                <div 
-                  class="hero__tech-item" 
-                  v-for="tech in category.items" 
+                <div
+                  class="hero__tech-item"
+                  v-for="tech in category.items"
                   :key="tech.name"
                   :title="tech.name"
                 >
@@ -256,7 +258,9 @@ export default {
   font-size: 14px;
   color: var(--color-text-secondary);
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   width: fit-content;
 }
 .hero__link-item:hover {
@@ -271,7 +275,11 @@ export default {
   align-items: center;
   gap: 12px;
   padding: 16px 32px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--color-text);
@@ -281,7 +289,7 @@ export default {
   font-size: 14px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -311,9 +319,15 @@ export default {
 }
 
 @keyframes gradient-rotate {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero__cta:hover::after {
@@ -347,10 +361,14 @@ export default {
 
 .hero__cta:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(102, 126, 234, 0.3),
     inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.08)
+  );
 }
 
 .hero__cta:hover .hero__cta-icon {
@@ -390,8 +408,13 @@ export default {
 }
 
 @keyframes float-button {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 /* --- Stats & Image --- */
@@ -495,7 +518,8 @@ export default {
 }
 
 @keyframes float3d {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotateX(0deg) rotateY(0deg);
   }
   25% {

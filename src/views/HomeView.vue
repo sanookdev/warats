@@ -7,7 +7,7 @@
       location="Pathum Thani, Thailand"
       email="nuk.warat@gmail.com"
       :services="['Website Design', 'Web Application', 'Fix Bug']"
-      profileImage="/sanookdev.png"
+      profileImage="/profile-1-Photoroom.png"
       :stats="[
         { label: 'BASKETBALL', value: '' },
         { label: 'PLAY WITH CATS', value: '' },
