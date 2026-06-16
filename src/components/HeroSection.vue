@@ -30,8 +30,8 @@
             <span class="hero__label">Contact</span>
             <div class="hero__contact">
               <div class="hero__social-secondary">
-                <a href="mailto:nuk.warat@gmail.com" class="hero__link-item">
-                  nuk.warat@gmail.com
+                <a href="mailto:sanooker.warats@gmail.com" class="hero__link-item">
+                  sanooker.warats@gmail.com
                 </a>
                 <a href="https://github.com/sanookdev" target="_blank" class="hero__link-item">
                   github.com/sanookdev

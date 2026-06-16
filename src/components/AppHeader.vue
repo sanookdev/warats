@@ -111,7 +111,7 @@ export default {
     ];
 
     const socialLinks = [
-      { name: "Email", url: "mailto:nuk.warat@gmail.com" },
+      { name: "Email", url: "mailto:sanooker.warats@gmail.com" },
       { name: "Github", url: "https://github.com/sanookdev" },
     ];
 

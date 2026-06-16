@@ -68,7 +68,7 @@ export default {
     socialLinks: {
       type: Array,
       default: () => [
-        { name: "Email", url: "mailto:nuk.warat@gmail.com" },
+        { name: "Email", url: "mailto:sanooker.warats@gmail.com" },
         { name: "Github", url: "https://github.com/sanookdev" },
       ],
     },

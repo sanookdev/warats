@@ -11,7 +11,7 @@
 
     <AppFooter
       name="Warat Supaporn"
-      email="nuk.warat@gmail.com"
+      email="sanooker.warats@gmail.com"
     />
 
     <ThemeToggle />

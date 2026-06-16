@@ -5,7 +5,7 @@
       subtitle="Fullstack Developer"
       biography="โปรแกรมเมอร์ร้อนเงิน หาเงินเลี้ยงแมว !!!"
       location="Pathum Thani, Thailand"
-      email="nuk.warat@gmail.com"
+      email="sanooker.warats@gmail.com"
       :services="['Website Design', 'Web Application', 'Fix Bug']"
       profileImage="/profile-1-Photoroom.png"
       :stats="[
@@ -56,12 +56,12 @@
     /> -->
 
     <!-- <ContactSection 
-      email="nuk.warat@gmail.com"
+      email="sanooker.warats@gmail.com"
       phone="0653523666"
       location="Pathum Thani, Thailand"
       :socials="[
          { name: 'Github', url: 'https://github.com/sanookdev' },
-         { name: 'Email', url: 'mailto:nuk.warat@gmail.com' }
+         { name: 'Email', url: 'mailto:sanooker.warats@gmail.com' }
       ]"
     /> -->
   </div>
