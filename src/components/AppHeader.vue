@@ -98,6 +98,7 @@ export default {
     const isScrolled = ref(false);
 
     const leftLinks = [
+      { name: 'BLOGS', path: '/blogs' },
       // { name: 'WORKS', path: '/works' },
       // { name : "HOME" , path:'/'},
       // { name: 'CONTACT', path: '/contact' }
@@ -105,6 +106,7 @@ export default {
 
     const navLinks = [
       { name: "Home", path: "/" },
+      { name: "Blogs", path: "/blogs" },
       // { name: 'Works', path: '/works' },
       // { name: 'About', path: '/#about' },
       // { name: 'Contact', path: '/contact' }//

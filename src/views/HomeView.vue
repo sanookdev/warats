@@ -16,6 +16,8 @@
       :clients="[{ name: 'email' }, { name: 'github' }]"
     />
 
+    <BlogsSection />
+
     <!-- <WorksSection 
       :works="[
         {
@@ -69,6 +71,7 @@
 
 <script>
 import HeroSection from "@/components/HeroSection.vue";
+import BlogsSection from "@/components/BlogsSection.vue";
 import WorksSection from "@/components/WorksSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import ContactSection from "@/components/ContactSection.vue";
@@ -77,6 +80,7 @@ export default {
   name: "HomeView",
   components: {
     HeroSection,
+    BlogsSection,
     WorksSection,
     AboutSection,
     ContactSection,
