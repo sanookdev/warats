@@ -55,7 +55,8 @@
         <div class="hero__center animate-scaleIn">
           <div class="hero__image-ring">
             <div class="hero__image-wrapper">
-              <img :src="profileImage" :alt="name" class="hero__image" />
+              <img :src="profileImage" :alt="name" class="hero__image hero__image--default" />
+              <img src="/profile-basket.jpg" :alt="name" class="hero__image hero__image--hover" />
             </div>
           </div>
         </div>
@@ -574,10 +575,33 @@ export default {
   height: 100%;
   min-height: 200px;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero__image-ring:hover .hero__image {
+.hero__image--default {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero__image--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.1);
+}
+
+.hero__image-ring:hover .hero__image--default {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.hero__image-ring:hover .hero__image--hover {
+  opacity: 1;
   transform: scale(1.04);
 }
 

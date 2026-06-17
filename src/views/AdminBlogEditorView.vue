@@ -86,8 +86,8 @@
         </div>
 
         <!-- Cover Preview -->
-        <div class="blog-editor__cover-preview" v-if="form.coverImage">
-          <img :src="form.coverImage" alt="Cover preview" @error="form.coverImage = ''" />
+        <div class="blog-editor__cover-preview" v-if="form.coverImage && !coverImageError">
+          <img :src="form.coverImage" alt="Cover preview" @error="coverImageError = true" />
         </div>
 
         <!-- Quill Editor -->
@@ -122,7 +122,8 @@ export default {
       isEditing: false,
       editId: null,
       isSaving: false,
-      showSuccess: false
+      showSuccess: false,
+      coverImageError: false
     }
   },
   mounted() {
@@ -139,6 +140,11 @@ export default {
   beforeUnmount() {
     // Quill cleanup not strictly needed but good practice
     this.quill = null
+  },
+  watch: {
+    'form.coverImage'() {
+      this.coverImageError = false
+    }
   },
   methods: {
     initQuill() {
