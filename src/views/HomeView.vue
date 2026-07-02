@@ -16,7 +16,7 @@
       :clients="[{ name: 'email' }, { name: 'github' }]"
     />
 
-    <BlogsSection />
+    <!-- <BlogsSection /> -->
 
     <!-- <WorksSection 
       :works="[
