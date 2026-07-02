@@ -17,6 +17,12 @@
           class="header__link"
           >GAME PROFILE</a
         >
+        <a
+          href="https://sanookdev.github.io/profile"
+          target="_blank"
+          class="header__link"
+          >MORE ABOUT <MEnu:t></MEnu:t></a
+        >
       </div>
 
       <!-- Logo -->
@@ -66,8 +72,6 @@
         aria-label="Toggle menu"
       >
         <span :class="{ active: isMenuOpen }"></span>
-        <span :class="{ active: isMenuOpen }"></span>
-        <span :class="{ active: isMenuOpen }"></span>
       </button>
     </nav>
 
@@ -98,7 +102,7 @@ export default {
     const isScrolled = ref(false);
 
     const leftLinks = [
-      { name: 'BLOGS', path: '/blogs' },
+      // { name: 'BLOGS', path: '/blogs' },
       // { name: 'WORKS', path: '/works' },
       // { name : "HOME" , path:'/'},
       // { name: 'CONTACT', path: '/contact' }
@@ -106,7 +110,7 @@ export default {
 
     const navLinks = [
       { name: "Home", path: "/" },
-      { name: "Blogs", path: "/blogs" },
+      // { name: "Blogs", path: "/blogs" }
       // { name: 'Works', path: '/works' },
       // { name: 'About', path: '/#about' },
       // { name: 'Contact', path: '/contact' }//
